@@ -1,0 +1,30 @@
+{
+  "name": "veld.chat-ts",
+  "version": "1.0.0",
+  "description": "A js/ts wrapper of the veld.chat API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "tsc"
+  },
+  "keywords": [
+    "veld",
+    "veld.chat",
+    "chat.veld",
+    "chat",
+    "api",
+    "wrapper",
+    "js"
+  ],
+  "author": "Dice2213",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/events": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "@typescript-eslint/parser": "^4.11.0",
+    "eslint": "^7.16.0"
+  },
+  "dependencies": {
+    "events": "^3.2.0",
+    "socket.io-client": "^3.0.4"
+  }
+}
