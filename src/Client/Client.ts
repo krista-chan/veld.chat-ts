@@ -29,8 +29,8 @@ export class Client extends EventEmitter {
     });
     return this;
   };
-  sendMessage(ChannelID: string, content?: string, embed?: Embed) {
-    return new Message(this, ChannelID, content, embed)
+  sendMessage(ChannelID: string, content?: string | Embed) {
+    return new Message(this, ChannelID, content)
   }
 };
 
