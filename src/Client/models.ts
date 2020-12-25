@@ -15,17 +15,15 @@ export type Events =
 
 export interface Member {
   id: string;
+  avatarUrl?: string;
+  name: string;
+  bot: boolean;
 };
 
-export interface ClientUser {
-  
-};
-
-export interface Members {};
+export interface ClientUser extends Member {};
 
 export interface GatewayResponse {
   token: string;
-  bot: boolean;
   user: ClientUser;
   members: Array<Member>;
 };
