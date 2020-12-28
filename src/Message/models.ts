@@ -13,4 +13,4 @@ export interface Embed {
   thumbnailUrl?: string;
 }
 
-export type MessageCreateArgs = {content: string} | {embed: Embed};
+export type MessageCreateArgs = { content: string } | { embed: Embed };
