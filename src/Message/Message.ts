@@ -1,7 +1,7 @@
 import axios from "axios";
 import utils from "util";
-import { Embed, MessageCreateArgs } from "./models";
-import { Client } from "../Client/Client";
+import {Embed, MessageCreateArgs} from "./models";
+import {Client} from "../Client/Client";
 
 export interface Message {
   content?: string;
@@ -10,23 +10,21 @@ export interface Message {
   mentions: Array<string>;
 }
 
-let sendContent: MessageCreateArgs = { content: null };
+let sendContent: MessageCreateArgs = {content: null};
 
 export class Message {
   constructor(client: Client, channelId: string, content?: string | Embed) {
-    if (!content || content === null) {
-      throw new Error("[ERROR] Cannot send an empty message");
-    }
+    if (!content) throw new Error("[ERROR] Cannot send an empty message");
     if (content && typeof content === "string") {
-      sendContent = { content: content };
+      sendContent = {content: content};
     } else if (content && typeof content === "object") {
-      sendContent = { embed: content };
+      sendContent = {embed: content};
     }
-    tryAndPostTheFuckingMessage(client, channelId);
+    postMessage(client, channelId);
   }
 }
 
-async function tryAndPostTheFuckingMessage(
+async function postMessage(
   client: Client,
   channelId: string,
 ) {

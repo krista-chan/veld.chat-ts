@@ -18,12 +18,13 @@ export interface Member {
   avatarUrl?: string;
   name: string;
   bot: boolean;
-};
+}
 
-export interface ClientUser extends Member {};
+export interface ClientUser extends Member {
+}
 
 export interface GatewayResponse {
   token: string;
   user: ClientUser;
   members: Array<Member>;
-};
+}
